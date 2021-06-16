@@ -11,7 +11,7 @@ st.sidebar.title('Analysis of Google Drive Audit Log')
 st.markdown(" This application is contained Google Drive Audit Log data to analyze the usage of G-Drive")
 st.sidebar.markdown(" This application is contained Google Drive Audit Log data to analyze the usage of G-Drive")
 
-DATA_URL = ('https://github.com/fikrifikar/streamlit_app.git/drive_logs_1623654488962.csv')
+DATA_URL = ('fikrifikar/streamlit_app/drive_logs_1623654488962.csv')
 
 @st.cache(persist=True)
 def load_data():
