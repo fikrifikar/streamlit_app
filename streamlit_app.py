@@ -1,6 +1,5 @@
 ###install packages###
-python -m pip install -U pip
-python -m pip install -U matplotlib
+pip install matplotlib
 pip install plotly==4.14.3
 pip install wordcloud
 
