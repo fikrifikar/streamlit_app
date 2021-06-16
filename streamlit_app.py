@@ -30,7 +30,7 @@ select = st.sidebar.selectbox('Visualization Type', ['Bar plot', 'Pie Chart'], k
 visibility_count = data['Visibility'].value_counts()
 visibility_count = pd.DataFrame({'Visibility_type':visibility_count.index, 'Count':visibility_count.values})
 
-if not st.sidebar.checkbox("Hide", True):
+if not st.sidebar.checkbox("Hide", False):
     st.markdown("### Number of visibility type")
     if select == 'Bar plot':
         fig = px.bar(visibility_count, x='Visibility_type', y='Count', color='Count', height=500)
@@ -42,7 +42,7 @@ if not st.sidebar.checkbox("Hide", True):
 st.sidebar.subheader("When are the users access the data ?")
 hour = st.sidebar.slider("Hour of day", 0, 23)
 modified_data = data[data['Date'].dt.hour == hour]
-if not st.sidebar.checkbox("Close", True, key='1'):
+if not st.sidebar.checkbox("Close", False, key='1'):
     st.markdown('%i data between %i:00 and %i:00' % (len(modified_data), hour, (hour+1)%24))
     #st.map(modified_data)
     if st.sidebar.checkbox("Show raw data", False):
