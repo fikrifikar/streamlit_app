@@ -1,7 +1,7 @@
 ###install packages###
-pip install matplotlib
-pip install plotly==4.14.3
-pip install wordcloud
+#pip install matplotlib
+#pip install plotly==4.14.3
+#pip install wordcloud
 
 import streamlit as st
 import pandas as pd
