@@ -61,7 +61,7 @@ st.sidebar.header("Word Cloud")
 word_sentiment = st.sidebar.radio('Display word cloud for what Event_Name ?', ('Edit', 'View', 'Download', 'Rename', 'Create', 'Upload', 'Move'))
 
 if not st.sidebar.checkbox("Close", True, key='3'):
-    st.header('Word cloud for %s sentiment' % (word_sentiment))
+    st.header('Word cloud for %s most access owners' % (word_sentiment))
     df = data[data['Event_Name']==word_sentiment]
     words = ' '.join(df['Owner'])
     processed_words = ' '.join([word for word in words.split() if 'http' not in word and not word.startswith('@') and word != 'RT'])
