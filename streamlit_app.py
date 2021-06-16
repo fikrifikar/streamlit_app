@@ -16,7 +16,7 @@ st.sidebar.title('Analysis of Google Drive Audit Log')
 st.markdown(" This application is contained Google Drive Audit Log data to analyze the usage of G-Drive")
 st.sidebar.markdown(" This application is contained Google Drive Audit Log data to analyze the usage of G-Drive")
 
-DATA_URL = ('C:\\Users\\User\\Documents\\Data Science\\Python\\Analisis GDrive\\drive_logs_1623654488962.csv')
+DATA_URL = ('https://drive.google.com/file/d/1AF8tmCKA1bZOv45I-vxgOHICEp14uO_D/view?usp=sharing')
 
 @st.cache(persist=True)
 def load_data():
